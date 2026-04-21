@@ -7,7 +7,8 @@ vim.g.maximizer_set_default_mapping = 0
 
 vim.call('plug#begin')
 
-Plug('sainnhe/gruvbox-material')
+-- Plug('sainnhe/gruvbox-material')
+Plug('folke/tokyonight.nvim', { ['branch'] = 'main' })
 
 Plug('nvim-tree/nvim-tree.lua')
 Plug('nvim-tree/nvim-web-devicons')
