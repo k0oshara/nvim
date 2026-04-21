@@ -39,6 +39,9 @@ mapping = cmp.mapping.preset.insert({
 	  end
   end, {'i', 's'}),
 }),
+completion = {
+  autocomplete = { cmp.TriggerEvent.TextChanged },
+},
 sources = cmp.config.sources({
   { name = 'nvim_lsp' },
   { name = 'nvim_lsp_signature_help' },
