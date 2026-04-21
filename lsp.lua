@@ -21,6 +21,10 @@ local on_attach = function(_, bufnr)
 
   vim.bo[bufnr].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
+  if vim.lsp.inlay_hint and vim.lsp.inlay_hint.enable then
+    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+  end
+
   vim.api.nvim_buf_create_user_command(bufnr, 'Fmt', function()
     vim.lsp.buf.format({ async = true })
   end, { desc = 'Format current buffer' })
