@@ -16,10 +16,11 @@ vim.filetype.add({
   },
 })
 
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
   vim.bo[bufnr].omnifunc = 'v:lua.vim.lsp.omnifunc'
+  require("navic").attach(client, bufnr)
 
   if vim.lsp.inlay_hint and vim.lsp.inlay_hint.enable then
     vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })

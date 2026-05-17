@@ -8,7 +8,6 @@ vim.g.maximizer_set_default_mapping = 0
 vim.call('plug#begin')
 
 Plug('sainnhe/gruvbox-material')
--- Plug('folke/tokyonight.nvim', { ['branch'] = 'main' })
 
 Plug('nvim-tree/nvim-tree.lua')
 Plug('nvim-tree/nvim-web-devicons')
@@ -16,6 +15,7 @@ Plug('romgrk/barbar.nvim')
 Plug('nvim-lualine/lualine.nvim') 
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 Plug('neovim/nvim-lspconfig') 
+Plug('SmiteshP/nvim-navic')
 
 Plug('hrsh7th/cmp-buffer') 
 Plug('hrsh7th/cmp-path')
@@ -41,6 +41,7 @@ require "theme"
 require "vimtree"
 require "barbar_config"
 require "lua_line"
+require "navic"
 require "lsp"
 require "cmp_config"
 require "treesitter"
